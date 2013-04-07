@@ -1,0 +1,6 @@
+[submodule "byu-testing-center-line.git"]
+	path = byu-testing-center-line.git
+	url = https://github.com/bean5/byu-testing-center-line.git
+[submodule "byu-webcams.git"]
+	path = byu-webcams.git
+	url = https://github.com/bean5/byu-webcams.git
