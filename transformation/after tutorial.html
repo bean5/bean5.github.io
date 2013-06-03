@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
 	<head>
 		<meta charset='utf-8' />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta name="description" content="Bean5.github.io : " />
 
 	  	<link rel="stylesheet" href="reveal.css">	
-		<script type="text/javascript" src="../javascripts/ga.js"></script>
+		<!-- <script type="text/javascript" src="../javascripts/ga.js"></script> -->
 
 		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script type="text/javascript" src="jquery.reveal.js"></script>
+		<!-- // <script type="text/javascript" src="jquery.reveal.js"></script> -->
 
 		<!-- Attach the Joyride CSS file -->
 		<link rel=" stylesheet" type="text/css" href="jquery.joyride-2.0.3.css">
@@ -18,27 +17,6 @@
 		<!-- Then attach the Joyride plugin -->
 		<script src="jquery.joyride-2.0.3.js"></script>
 
-		<script>
-		  $(document).ready(function() {
-		    $("#tutorial").joyride({
-				'tipLocation': 'bottom',         // 'top' or 'bottom' in relation to parent
-				'nubPosition': 'auto',           // override on a per tooltip bases
-				'scrollSpeed': 300,              // Page scrolling speed in ms
-				'timer': 2000,                   // 0 = off, all other numbers = time(ms) 
-				'startTimerOnClick': true,       // true/false to start timer on first click
-				'nextButton': true,              // true/false for next button visibility
-				'tipAnimation': 'pop',           // 'pop' or 'fade' in each tip
-				'pauseAfter': [],                // array of indexes where to pause the tour after
-				'tipAnimationFadeSpeed': 300,    // if 'fade'- speed in ms of transition
-				'cookieMonster': true,           // true/false for whether cookies are used
-				'cookieName': 'JoyRide',         // choose your own cookie name
-				'cookieDomain': false,           // set to false or yoursite.com
-				// 'tipContainer': body,            // Where the tip be attached if not inline
-				// 'postRideCallback': $noop,       // a method to call once the tour closes
-				// 'postStepCallback': $noop        // A method to call after each step
-		    });
-		  });
-		</script>
 		
 		<title>Simple Sample (with Walkthrough)</title>
 	</head>
@@ -51,7 +29,7 @@
 	          <!--<a id="forkme_banner" href="https://github.com/bean5/">View on GitHub</a>-->
 
 	          <h1 id="project_title">Simple Sample</h1>
-	          <h2 id="project_tagline">(with CSS Styling)</h2>
+	          <h2 id="project_tagline">(with Walkthrough)</h2>
 
 	        </header>
 	    </div>
@@ -79,13 +57,13 @@
 
 			<ol id="tutorial" style="display: none;">
 			  <!-- /* data-id needs to be the same as the parent it will attach to */ -->
-			  <li data-id="project_title">This is where the header goes.</li>
+			  <li data-id="project_title"><p>This is where the header goes.</p></li>
 			  <!-- /* This tip will be display as a modal */ -->
-			  <li data-id="project_tagline">This is where the tagline goes.</li>
+			  <li data-id="project_tagline"><p>This is where the tagline goes.</p></li>
 			  <!-- /* using 'data-button' lets you have custom button text */ -->
-			  <li data-class="parent-element-class" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">Content...</li>
+			  <li data-class="parent-element-class" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">Content2...</li>
 			  <!-- /* you can put a class for custom styling */ -->
-			  <li data-id="awesomeButton" class="custom-class">Content...</li>
+			  <li data-id="awesomeButton" class="custom-class"><p>And this is a list with a styled button.  This is the end of the walkthrough.</p></li>
 			</ol>
 	    </div>
 
@@ -97,5 +75,31 @@
 	      </footer>
 	    </div>
 
+
+		<script>
+		  $(window).load(function() {
+		    $("#tutorial").joyride({
+		    	autoStart : true,
+		    	'tipAnimation' : 'pop',
+				// 'tipLocation': 'bottom',         // 'top' or 'bottom' in relation to parent
+				// 'nubPosition': 'auto',           // override on a per tooltip bases
+				// 'scrollSpeed': 300,              // Page scrolling speed in ms
+				// 'timer': 2000,                   // 0 = off, all other numbers = time(ms) 
+				// 'startTimerOnClick': true,       // true/false to start timer on first click
+				// 'nextButton': true,              // true/false for next button visibility
+				// 'tipAnimation': 'pop',           // 'pop' or 'fade' in each tip
+				// 'pauseAfter': [],                // array of indexes where to pause the tour after
+				// 'tipAnimationFadeSpeed': 300,    // if 'fade'- speed in ms of transition
+				// 'cookieMonster': false,           // true/false for whether cookies are used
+				// 'cookieName': 'JoyRide',         // choose your own cookie name
+				// 'cookieDomain': false,           // set to false or yoursite.com
+				// // 'tipContainer': body,            // Where the tip be attached if not inline
+				// 'postRideCallback': null,       // a method to call once the tour closes
+				// 'postStepCallback': null        // A method to call after each step
+	        modal:true,
+	        // expose: true
+		    });
+		  });
+		</script>
 	</body>
 </html>
