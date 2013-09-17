@@ -47,17 +47,23 @@
 			var param = getURLParameter('topic');
 			var topics = {'ling' : 1, 'comp' : 1, 'rel' : 1, 'misc' : 1, 'all' :1};
 			var inList = topics[param];
-			if(param.length > 0 && inList)
+
+			if(inList)
 			{
-				if($('section article.' + param).length <= 1)
-				{
-					//no-op since there are too-few articles on the topic
-				}
-				else
+				if(param.length > 0)
 				{
 					$('section article').hide();
-					$('section article.' + param).show();
-					$('#sidr ul li.' + param).addClass('active');
+					if($('section article.' + param).length < 1)
+					{
+						//no-op since there are too-few articles on the topic
+						alert('Sorry, I don\'t have any musings on that topic--yet...so I\'ll just show all the musings to you.');
+						$('section article').show();
+					}
+					else
+					{
+						$('section article.' + param).show();
+						$('#sidr ul li.' + param).addClass('active');
+					}
 				}
 			}
 
@@ -114,9 +120,9 @@
 				<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.</p>
 			</article>
 
-			<article class="ling" date="9-17-2013">
+			<article class="ling rel" date="9-17-2013">
 				<h3>Milk and Honey</h3>
-				<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/they're). Thus, translators would have a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
+				<p>In the scriptures (The Holy Bible and The Book of Mormon), the words "milk" and "honey" end up popping up together. Why do you think that is?  I like to think that it is because in a particular language (Persian if I recall correctly), which may have contributed to Hebrew, the word for milk/honey is a homograph (like English's their/there/they're). Thus, translators would have a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
 			</article>
 
 			<article class="ling" date="9-17-2013">
