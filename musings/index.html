@@ -4,7 +4,7 @@
 	<head>
 		<meta charset='utf-8' />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<meta name="description" content="Bean5.github.io : " />
+		<meta name="description" content="Bean5.github.io : Musings" />
 
 		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 		<script type="text/javascript" src="javascripts/ga.js"></script>
@@ -24,31 +24,53 @@
 			);
 		}
 
-		jQuery(document).ready(function() {
+		var margin = 0;
+
+		$(document).ready(function() {
+			margin = $('.inner').first().css('margin-left');
+
 			//load sidr
 			$('#simple-menu').sidr();
+			console.log($('#main_content').css('margin-left'));
+			$('#simple-menu').on('click', function() {
+				if($('.inner').first().css('margin-left') == margin)
+					$('.inner').css('margin-left', 100);
+				else
+					$('.inner').css('margin-left', margin);
+			});
+			$('#simple-menu').click();
+
 			$('#sidr ul li')
 				.addClass('all')
 				.removeClass('active');
 
 			//select musings
 			var param = getURLParameter('topic');
-			var inList = ({'ling' : 1, 'comp' : 1, 'rel' : 1, 'misc' : 1, 'all' :1})[param];
+			var topics = {'ling' : 1, 'comp' : 1, 'rel' : 1, 'misc' : 1, 'all' :1};
+			var inList = topics[param];
 			if(param.length > 0 && inList)
 			{
-				jQuery('section article').hide();
-				
-				jQuery('section article.' + param).show();
+				if($('section article.' + param).length <= 1)
+				{
+					//no-op since there are too-few articles on the topic
+				}
+				else
+				{
+					$('section article').hide();
+					$('section article.' + param).show();
+					$('#sidr ul li.' + param).addClass('active');
+				}
+			}
 
-				jQuery('section article').hide();
-				
-				jQuery('section article.' + param).show();
-
-				$('#sidr ul li.' + param).addClass('active');
+			for(var topic in topics)
+			{
+				$('section article.' + topic).first()
+					.addClass('disclaimer')
+					.css('border-top', 'medium solid gray')
+					.css('margin-top', '80px');
 			}
 		});
 		</script>
-
 		
 		<title>My Musings</title>
 	</head>
@@ -64,19 +86,20 @@
 			<a id="left-menu" href="#left-menu"></a> 
 			<a id="right-menu" href="#right-menu"></a>
 
-			<a id="simple-menu" href="#sidr">View Topics</a>
+			<a id="simple-menu" href="#sidr">Toggle Topics Menu</a>
         </header>
     </div>
 		
  
 	<div id="sidr">
-	  <!-- Sidr menu content -->
-	  <ul>
-	    <li class="ling"><a href="index.html?topic=ling">Linguistic Musings</a></li>
-	    <li class="comp"><a href="index.html?topic=comp">Computational Musings</a></li>
-	    <li class="rel"><a href="index.html?topic=rel">Religious Musings</a></li>
-	    <li class="misc"><a href="index.html?topic=misc">Misc. Musings</a></li>
-	  </ul>
+		<!-- Sidr menu content -->
+		<ul>
+			<li class="all"><a href="index.html">All Musings</a></li>
+			<li class="ling"><a href="index.html?topic=ling">Linguistic Musings</a></li>
+			<li class="comp"><a href="index.html?topic=comp">Computational Musings</a></li>
+			<li class="rel"><a href="index.html?topic=rel">Religious Musings</a></li>
+			<li class="misc"><a href="index.html?topic=misc">Misc. Musings</a></li>
+		</ul>
 	</div>
 
     <!-- MAIN CONTENT -->
@@ -87,17 +110,30 @@
 			<p>Here I include some of my musings on various topics.</p>
 
 			<article class="ling">
-				<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.
+				<h2>Linguistic Musings</h2>
+				<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.</p>
+			</article>
 
+			<article class="ling">
 				<h3>Milk and Honey</h3>
-				<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/ and they're.) Thus, translators would have a hard time determining which was which. Indeed, ancient speakers might have even though of them as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
+				<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/they're). Thus, translators would have a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
 			</article>
 
 			<article class="ling">
 				<h3>Fonts and Typesets</h3>
 				<p>I was talking to a friend today who mentioned how some professors prefer certain fonts over others. I recalled once reading a research article on this very topic. It turns out that some types of fonts, to the human, seem to be more professional, or unprofessional, or creepy. Whether this is because it is learned (taught to us by English teachers who nag for "Times New Roman 12 double-spaced...") or innate is another question. </p>
 			</article>
-			
+
+			<article class="comp">
+				<h2>Computational Musings</h2>
+				<p>Disclaimer: I studied electrical engineering, computer engineering, computer science, and linguistics. So read this from the standpoint of one who enjoys technology + theory.</p>
+			</article>
+
+			<article class="comp">
+				<h3>jQuery</h3>
+				<p>The more I use jQuery, the more I realize how awesome it is. It's not complicated, which is one contributing factor to its success. I learned the basics from <a href="codeacademy.com">codeacademy.com</a> and the rest from just using it.</p>
+			</article>
+
 			<p>That's all I have for now...</p>
 
 			<br />
