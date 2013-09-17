@@ -8,33 +8,96 @@
 
 		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 		<script type="text/javascript" src="javascripts/ga.js"></script>
+
+		<!-- Include Sidr bundled CSS theme -->
+		<link rel="stylesheet" href="javascripts/sidr-package-1.1.1/stylesheets/jquery.sidr.dark.css">
+
+		<!-- Include jQuery -->
+		<script src="javascripts/jquery-2.0.3.js"></script>
+		<!-- Include the Sidr JS -->
+		<script src="javascripts/sidr-package-1.1.1/jquery.sidr.min.js"></script>
+
+		<script>
+		function getURLParameter(name) {
+			return decodeURI(
+				(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+			);
+		}
+
+		jQuery(document).ready(function() {
+			//load sidr
+			$('#simple-menu').sidr();
+			$('#sidr ul li')
+				.addClass('all')
+				.removeClass('active');
+
+			//select musings
+			var param = getURLParameter('topic');
+			var inList = ({'ling' : 1, 'comp' : 1, 'rel' : 1, 'misc' : 1, 'all' :1})[param];
+			if(param.length > 0 && inList)
+			{
+				jQuery('section article').hide();
+				
+				jQuery('section article.' + param).show();
+
+				jQuery('section article').hide();
+				
+				jQuery('section article.' + param).show();
+
+				$('#sidr ul li.' + param).addClass('active');
+			}
+		});
+		</script>
+
 		
-		<title>Ling Musings</title>
+		<title>My Musings</title>
 	</head>
 
-	
 	<!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <!--<a id="forkme_banner" href="https://github.com/bean5/">View on GitHub</a>-->
+			<!--<a id="forkme_banner" href="https://github.com/bean5/">View on GitHub</a>-->
 
-          <h1 id="project_title">Welcome to Linguistic Musings</h1>
-          <h2 id="project_tagline"></h2>
+			<h1 id="project_title">Welcome to My Musings</h1>
+			<h2 id="project_tagline"></h2>
 
+			<a id="left-menu" href="#left-menu"></a> 
+			<a id="right-menu" href="#right-menu"></a>
+
+			<a id="simple-menu" href="#sidr">View Topics</a>
         </header>
     </div>
+		
+ 
+	<div id="sidr">
+	  <!-- Sidr menu content -->
+	  <ul>
+	    <li class="ling"><a href="index.html?topic=ling">Linguistic Musings</a></li>
+	    <li class="comp"><a href="index.html?topic=comp">Computational Musings</a></li>
+	    <li class="rel"><a href="index.html?topic=rel">Religious Musings</a></li>
+	    <li class="misc"><a href="index.html?topic=misc">Misc. Musings</a></li>
+	  </ul>
+	</div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+
 		<section id="main_content" class="inner">
-			<h2>My Linguistic Musings</h2>
-			<p>Here I include some of my various musings on linguistics.</p>
+			<h2>My Musings</h2>
+			<p>Here I include some of my musings on various topics.</p>
+
+			<article class="ling">
+				<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.
+
+				<h3>Milk and Honey</h3>
+				<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/ and they're.) Thus, translators would have a hard time determining which was which. Indeed, ancient speakers might have even though of them as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
+			</article>
+
+			<article class="ling">
+				<h3>Fonts and Typesets</h3>
+				<p>I was talking to a friend today who mentioned how some professors prefer certain fonts over others. I recalled once reading a research article on this very topic. It turns out that some types of fonts, to the human, seem to be more professional, or unprofessional, or creepy. Whether this is because it is learned (taught to us by English teachers who nag for "Times New Roman 12 double-spaced...") or innate is another question. </p>
+			</article>
 			
-			<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.
-
-			<h3>Milk and Honey</h3>
-			<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/ and they're.) Thus, translators would have a hard time determining which was which. Indeed, ancient speakers might have even though of them as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
-
 			<p>That's all I have for now...</p>
 
 			<br />
