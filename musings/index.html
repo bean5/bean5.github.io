@@ -31,10 +31,9 @@
 
 			//load sidr
 			$('#simple-menu').sidr();
-			console.log($('#main_content').css('margin-left'));
 			$('#simple-menu').on('click', function() {
 				if($('.inner').first().css('margin-left') == margin)
-					$('.inner').css('margin-left', 100);
+					$('.inner').css('margin-left', 40);
 				else
 					$('.inner').css('margin-left', margin);
 			});
@@ -114,32 +113,39 @@
 				<p>Disclaimer: If you are looking for an introduction to linguistics, rather than tools for it, you can either go to my version of <a href="intro-ling/intro.html">introduction to linguistics</a>, which is in its infancy and generally added to only on-demand. For a more in-depth study of linguistics, you can go to a library (or the internet, wikipedia) and search for books using linguistic <a href="key-terms.html">key terms</a>.</p>
 			</article>
 
-			<article class="ling">
+			<article class="ling" date="9-17-2013">
 				<h3>Milk and Honey</h3>
 				<p>In the scriptures (The Holy Bible and The Book of Mormon), these words end up popping up together. Why do you think that is?  I like to think that it is because in persian, which may have contributed to Hebrew, the word for milk/honey is a homograph (it's like English's their/there/they're). Thus, translators would have a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
 			</article>
 
-			<article class="ling">
+			<article class="ling" date="9-17-2013">
 				<h3>Fonts and Typesets</h3>
 				<p>I was talking to a friend today who mentioned how some professors prefer certain fonts over others. I recalled once reading a research article on this very topic. It turns out that some types of fonts, to the human, seem to be more professional, or unprofessional, or creepy. Whether this is because it is learned (taught to us by English teachers who nag for "Times New Roman 12 double-spaced...") or innate is another question. </p>
 			</article>
 
-			<article class="comp">
+			<article class="comp" date="9-17-2013">
 				<h2>Computational Musings</h2>
 				<p>Disclaimer: I studied electrical engineering, computer engineering, computer science, and linguistics. So read this from the standpoint of one who enjoys technology + theory.</p>
 			</article>
 
-			<article class="comp">
+			<article class="comp" date="9-17-2013">
 				<h3>jQuery</h3>
 				<p>The more I use jQuery, the more I realize how awesome it is. It's not complicated, which is one contributing factor to its success. I learned the basics from <a href="codeacademy.com">codeacademy.com</a> and the rest from just using it.</p>
 			</article>
 
-			<p>That's all I have for now...</p>
+			<article class="comp" date="9-17-2013">
+				<h3>Self-Spamming: Leveraging Dynamic Self-Addressed Emails</h3>
+				<p>As a algorithm designer (programmer/software developer/etc.), I have found that I sometimes end up needing to generate sample emails from the systems that I work on. It is at this point that I realize the importance of inbox filtering or of having an email account for spam emails. However, rather than build filtering rules for every system, I can simply leverage gmail's ability to recognize dynamic emails. Say my email address was bean@gmail.com. Now say I wanted to spam myself for system, X. I could have the code sent to bean+spam+x@gmail.com. My standard filter for "+spam" would pick this up and file it for me. I coudl then search for the generated emails of interested by going to that folder, then searching for +X! Handy, usefull, quick. One filter to rule them all.</p>
+				<p>Now if only I could get the real spammers to include such meta-information so I can filter them to the real spam-box...</p>
+			</article>
 
-			<br />
-			<p><strong>For more projects of my own, go to <a href="../">My Home Page</a></strong></p>
-			<p>If you would like to provide feedback of any form, feel free to send an email to <strong>anonimo at byu.edu</strong>.</p>
+			<div style="margin-top:40px; border-top: medium dashed gray;">
+				<p>That's all I have for now...</p>
 
+				<br />
+				<p><strong>For more of my projects, see <a href="../">My Home Page</a></strong></p>
+				<p>If you would like to provide feedback of any form, feel free to send an email to <strong>anonimo at byu.edu</strong>.</p>
+			</div>
 		</section>
     </div>
 
