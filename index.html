@@ -7,9 +7,10 @@
     <meta name="description" content="Bean5.github.io : " />
 
   	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="musings/javascripts/jquery-2.0.3.js"></script>
   	<script type="text/javascript" src="javascripts/ga.js"></script>
 
-    <title>Bean5.github.io</title>
+    <title>Michael Bean</title>
   </head>
 
   <body>
@@ -19,7 +20,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/bean5">View on GitHub</a>
 
-          <h1 id="project_title">Bean5.github.io</h1>
+          <h1 id="project_title">Michael Bean</h1>
           <h2 id="project_tagline"></h2>
           
           <!-- <section id="downloads">
@@ -37,32 +38,98 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p style="font-size:larger">My name is Michael.  I am a graduate student studying (Computational) Linguistics at BYU.  I hope you benefit from some of my projects.  This site constitutes a collection of original and derivative work.  Where appropriate, I provide a link to the author's work.</p>
+        <p style="font-size:larger">
+          I am <a id="me">Michael Bean</a>. I officially work as a <a id="web-dev">web developer</a>, but that's not all of me. I actively <a id="contrib">contribute code</a> to the open source community, <a id="research">conduct research</a>, and <a id="solve">solve problems</a>. As a <a id="ling">linguistic</a> grad student at <a id="BYU">BYU</a>, I <a id="publish">publish</a>. In the process, I gather helpful <a id="NLP">NLP tools</a>. I do lots of smaller projects <a id="fun">just for fun</a>. I am a <a id="mormon">Mormon</a>. Occasionally, I have time to <a id="muse">muse</a>.</p>
 
-    		<h3>My Projects and Utilities</h3>
-    		<ul>
-    			<li><a href="http://students.cs.byu.edu/~bean5/ling-utils/">Ling Utils Project</a>: My favorite linguistic utilities listed in one place.  I have made local copies when possible so even if a webserver turns off, the utility is still available.</li>
-    			<li><a href="http://scriptures.byu.edu/wpsci/">WP SCI</a> Windows Phone 7, 8 version of the Scripture Citation Index (Online Versions: <a href="http://scriptures.byu.edu/">http://scriptures.byu.edu/</a>, <a href="http://scriptures.byu.edu/sci2/">http://scriptures.byu.edu/sci2/</a>, <a href="http://scriptures.byu.edu/mapscrip/">http://scriptures.byu.edu/mapscrip/</a>)</li>
-    			<li><a href="byu-testing-center-line.git/">BYU Testing Center Project</a> (also available in the google chrome store for free)<br /></li>
-    			<li><a href="byu-webcams.git/">BYU Webcams Project</a> (also available in the google chrome store for free).  Shows you the weather outside and inside.  It also automatically updates.</li>
-    			<li><a href="SCI-Talk.git/">Random Talk</a> (may soon be available in the google chrome store for free).  Displays a random LDS conference talk.  Great for those moments when you need a modern spiritual pick-me-up! (Retry page if you get an error)</li>
-    			<li><a href="tree-extension.git/">Random Tree Drawer</a> Generates a random tree every time you visit.  You can watch it build the branches as it goes!  Great reminder to do some family history research.</li>
-          <li><a href="https://github.com/bean5/LaTeX-Project-Management">LaTeX Project Management Template</a> An ongoing LaTeX project that provides the core project management paperwork. This includes stakeholder tables and more. </li>
-          <li><a href="transformation/before.html">Web Transformer</a> A step-by-step demonstration of the process through which a web page might undergo until it reaches web nirvana. Just keep clicking "Navigate to next" when you are ready to see what transformations remain.</li>
-          <li><a href="https://sites.google.com/site/beanmichael2/">My Online Portfolio</a></li>
-    		</ul>
-    		<h3>Research (or Fun)</h3>
-    		<ul>
-    			<li><a href="nlp-haiku/index.html">Haiku--Including some from General Conference</a></li>
-    			<li><a href="machine-learning/food-classification/index.html">Food Classification (machine learning)</a>: Ever wonder whether that particular "health food" is more like <em>fast food?</em></li>
-          <li><a href="musings/index.html?type=ling">My Linguistic Musings</a></li>
-          <li><a href="musings/index.html">All My Musings</a></li>
-    		</ul>
+        <div id="about">
+          <h4>Me and Mine</h4>
+          <ul>
+            <!-- <li><a href="" class="publish research solve">Aligning Religious Texts (coming soon)</a></li> -->
+            <li><a href="github-projects.html" class="contrib">Documentation for my Github projects</a></li>
+            <li><a href="http://students.cs.byu.edu/~bean5/ling-utils/" class="NLP ling">Ling Utils Project</a>: My favorite linguistic utilities listed in one place.  I have made local copies when possible so even if a webserver turns off, the utility is still available.</li>
+            <li><a href="byu-testing-center-line.git/" class="BYU web-dev">BYU Testing Center Project</a> (also available in the google chrome store for free)<br /></li>
+            <li><a href="byu-webcams.git/" class="contrib web-dev BYU">BYU Webcams Project</a> (also available in the google chrome store for free).  Shows you the weather outside and inside.  It also automatically updates!</li>
+            <li><a href="machine-learning/food-classification/index.html" class="research publish solve">Food Classification (machine learning)</a>: Ever wonder whether that particular "health food" is more like <em>fast food?</em></li>
+            <li><a href="http://bean5.github.io/LaTeX-Project-Management" class="contrib solve">LaTeX Project Management Template</a> An ongoing LaTeX project that provides the core project management paperwork. This includes stakeholder tables and more. </li>
+            <!-- <li><a href="transformation/before.html">Web Transformer</a> A step-by-step demonstration of the process through which a web page might undergo until it reaches web nirvana. Just keep clicking "Navigate to next" when you are ready to see what transformations remain.</li> -->
+            <!-- <li><a href="https://sites.google.com/site/beanmichael2/">My Online Portfolio</a></li> -->
+            <li><a href="nlp-haiku/index.html" class="research fun mormon">Haiku--Including some from General Conference</a></li>
+            <li><a href="http://bean5.github.io/Java-Porter-Stemmer/" class="contrib">Java 7 Porter Stemmer</a></li>
+            <li><a href="http://bean5.github.io/learn_words/" class="research fun">Learn interesting words</a></li>
+            <li><a href="http://www.linkedin.com/in/beanmichael" class="me">http://www.linkedin.com/in/beanmichael</a></li>
+            <li><a href="musings/index.html" class="muse me">My Musings</a></li>
+            <li><a href="musings/index.html?type=ling" class="ling">My Musings (on linguistics)</a></li>
+            <li><a href="musings/index.html?type=rel" class="mormon">My Musings (religious)</a></li>
+            <li><span class="NLP research publish solve">Noisy Midi Music Recognition Using Genetic Alignment</span></li>
+            <li><a href="http://bean5.github.io/paraphraseDetector/" class="contrib publish research solve">Paraphrase Detection</a></li>
+            <li><a href="SCI-Talk.git/" class="contrib mormon web-dev">Random Talk</a> (may soon be available in the google chrome store for free).  Displays a random LDS conference talk.  Great for those moments when you need a modern spiritual pick-me-up! (Retry page if you get an error)</li>
+            <li><a href="tree-extension.git/" class="solve fun">Random Tree Drawer</a> Generates a random tree every time you visit.  You can watch it build the branches as it goes!  Great reminder to do some family history research.</li>
+            <li><a href="http://bean5.github.io/AlliterationLocator/" class="contrib solve">Simple Orthographic Alliteration Locator</a></li>
+            <li><a href="http://www.twitter.com/#beanmichael" class="me">http://www.twitter.com/#beanmichael</a></li>
+            <li><a href="http://scriptures.byu.edu/wpsci/" class="mormon web-dev research solve">WP SCI</a> Windows Phone 7, 8 version of the Scripture Citation Index (Online Versions: <a href="http://scriptures.byu.edu/">http://scriptures.byu.edu/</a>, <a href="http://scriptures.byu.edu/sci2/">http://scriptures.byu.edu/sci2/</a>, <a href="http://scriptures.byu.edu/mapscrip/">http://scriptures.byu.edu/mapscrip/</a>)</li>
+      		</ul>
+        </div>
 
-        <h3>My Github Projects</h3>
-        <p>For a more complete listing of my projects, visit <a href="github-projects.html">here</a>.</p>
+        <div id="like">
+        	<h4>So, naturally, I like</h4>
+      		<ul>
+            <li><a href="https://ce.byu.edu/" class="BYU">BYU Continuing Education</a></li>
+            <li><a href="https://is.byu.edu/" class="BYU">BYU Independent Study</a></li>
+            <li><a href="https://is.byu.edu/" class="BYU research publish">BYU Harold B. Lee Library</a></li>
+            <li><a href="https://linguistics.byu.edu" class="BYU ling">BYU Linguistics Department</a></li>
+            <li><a href="http://familysearch.org" class="mormon research">FamilySearch</a></li>
+            <li><a href="https://github.com" class="contrib web-dev">Github</a></li>
+            <li><a href="https://jsfiddle.com" class="web-dev">jsfiddle.com</a></li>
+            <li><a href="https://google.com" class="web-dev research NLP">google.com</a></li>
+            <li><a href="https://bing.com" class="web-dev research NLP">bing.com</a></li>
+            <li><a href="https://www.lds.org" class="mormon">LDS.org</a></li>
+            <li><span class="me">myself</span></li>
+            <li><a href="https://www.mormon.org" class="mormon">Mormon.org</a></li>
+            <li><a href="https://scriptures.byu.edu/sci2" class="mormon">scriptures.byu.edu</a></li>
+            <li><a href="http://stackoverflow.com" class="contrib web-dev solve">stackoverflow.com</a></li>
+            <li><span class="muse">to think</span></li>
+            <li><a href="http://tigerdirect.com" class="fun">tigerdirect.com</a></li>
+            <li><a href="http://newegg.com" class="fun">newegg.com</a></li>
+            <li><a href="http://wikipedia.org" class="research">http://wikipedia.org</a></li>
+            <!-- <li><a href="" class=""></a></li> -->
+            <!-- <li><span class="me"></span></li> -->
+      		</ul>
+        </div>
+
       </section>
     </div>
+
+    <script>
+      $(function() {
+        hideAll();
+
+        $('#BYU').on('click', function() {toggleView('.BYU')});
+        $('#contrib').on('click', function() {toggleView('.contrib')});
+        $('#fun').on('click', function() {toggleView('.fun')});
+        $('#ling').on('click', function() {toggleView('.ling')});
+        $('#me').on('click', function() {toggleView('.me')});
+        $('#mormon').on('click', function() {toggleView('.mormon')});
+        $('#muse').on('click', function() {toggleView('.muse')});
+        $('#NLP').on('click', function() {toggleView('.NLP')});
+        $('#publish').on('click', function() {toggleView('.publish')});
+        $('#research').on('click', function() {toggleView('.research')});
+        $('#solve').on('click', function() {toggleView('.solve')});
+        $('#web-dev').on('click', function() {toggleView('.web-dev')});
+      });
+
+      function hideAll()
+      {
+        $('#about,#like').hide();
+        $('#about ul li, #like ul li').hide();
+      }
+
+      function toggleView(tag)
+      {
+        hideAll();
+        $('#about,#like').show();
+        $(tag).parent().show();
+      }
+    </script>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
