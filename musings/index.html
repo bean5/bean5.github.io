@@ -16,66 +16,6 @@
 		<script src="javascripts/jquery-2.0.3.js"></script>
 		<!-- Include the Sidr JS -->
 		<script src="javascripts/sidr-package-1.1.1/jquery.sidr.min.js"></script>
-
-		<script>
-		function getURLParameter(name) {
-			return decodeURI(
-				(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
-			);
-		}
-
-		var margin = 0;
-
-		$(document).ready(function() {
-			margin = $('.inner').first().css('margin-left');
-
-			//load sidr
-			$('#simple-menu').sidr();
-			$('#simple-menu').on('click', function() {
-				if($('.inner').first().css('margin-left') == margin)
-					$('.inner').css('margin-left', 40);
-				else
-					$('.inner').css('margin-left', margin);
-			});
-			$('#simple-menu').click();
-
-			$('#sidr ul li')
-				.addClass('all')
-				.removeClass('active');
-
-			//select musings
-			var param = getURLParameter('topic');
-			var topics = {'ling' : 1, 'comp' : 1, 'rel' : 1, 'misc' : 1, 'all' :1};
-			var inList = topics[param];
-
-			if(inList)
-			{
-				if(param.length > 0)
-				{
-					$('section article').hide();
-					if($('section article.' + param).length < 1)
-					{
-						//no-op since there are too-few articles on the topic
-						alert('Sorry, I don\'t have any musings on that topic--yet...so I\'ll just show all the musings to you.');
-						$('section article').show();
-					}
-					else
-					{
-						$('section article.' + param).show();
-						$('#sidr ul li.' + param).addClass('active');
-					}
-				}
-			}
-
-			for(var topic in topics)
-			{
-				$('section article.' + topic).first()
-					.addClass('disclaimer')
-					.css('border-top', 'medium solid gray')
-					.css('margin-top', '80px');
-			}
-		});
-		</script>
 		
 		<title>My Musings</title>
 	</head>
@@ -100,11 +40,12 @@
 		<ul>
 			<lh class="all"></lh><br />
 			<lh style="margin-left:10px; font-size:larger"><a href="../index.html">Home</a> &gt; Musings</lh>
-			<li class="all"><a href="index.html">All Musings</a></li>
-			<li class="comp"><a href="index.html?topic=comp">Computational Musings</a></li>
-			<li class="ling"><a href="index.html?topic=ling">Linguistic Musings</a></li>
+			<li class="all"><a href="index.html">All</a></li>
+			<li class="life"><a href="index.html?topic=life">Life</a></li>
+			<li class="comp"><a href="index.html?topic=comp">Computation</a></li>
+			<li class="ling"><a href="index.html?topic=ling">Linguistics</a></li>
 			<!-- <li class="misc"><a href="index.html?topic=misc">Misc. Musings</a></li> -->
-			<li class="rel"><a href="index.html?topic=rel">Religious Musings</a></li>
+			<li class="rel"><a href="index.html?topic=rel">Religion</a></li>
 		</ul>
 	</div>
 
@@ -113,7 +54,7 @@
 
 		<section id="main_content" class="inner">
 			<h2>My Musings</h2>
-			<p>Here I include some of my musings on various topics.</p>
+			<p>Here I include some of my musings on various topics. You can filter through them by topic by using the menu to the left. Note, though, that some posts exist in multiple topics, especially for linguistic/computational posts.</p>
 
 			<article class="ling">
 				<h2>Linguistic Musings</h2>
@@ -122,12 +63,7 @@
 				</p>
 			</article>
 
-			<article class="ling rel" date="9-17-2013">
-				<h3>Milk and Honey</h3>
-				<p>In the scriptures (The Holy Bible and The Book of Mormon), the words "milk" and "honey" end up popping up together. Why do you think that is?  I like to think that it is because in a particular language (Persian if I recall correctly), which may have contributed to Hebrew, the word for milk/honey is a homograph (like English's their/there/they're). Thus, translators would have a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
-			</article>
-
-			<article class="life" date="2-05-2014" id="evidence">
+			<article class="ling" date="2-05-2014" id="evidence">
 				<h3>How good is your <i>video</i>?</h3>
 				<p>Consider the following words and their translation:</p>
 				<ul>
@@ -138,6 +74,21 @@
 					<li>Video (English for old old old format for home movies)</li>
 				</ul>
 				<p>Do you <i>see</i> it? Vision and words about truth are related! Interesting eh? Okay, I might be wrong on this one, but I'm pretty sure it is real.</p>
+			</article>
+
+			<article class="rel">
+				<h2>Religious Musings</h2>
+				<p style="font-size: larger;">I'm a <a href="mormon.org">Mormon</a> (see also <a href="lds.org">LDS.org</a>). I believe in Christ--<em>I am christian</em>. He is the Son of God and I know that he died for me. He came to Earth to live like us and show us how to live. While he was here, he established/organized his church. I believe that his church is here and that God directs it. </p>
+			</article>
+
+			<article class="ling rel" date="9-17-2013">
+				<h3>Milk and Honey</h3>
+				<p>In the scriptures (The Holy Bible and The Book of Mormon), the words "milk" and "honey" end up popping up together. Why do you think that is?  I like to think that it is because in a particular language (Persian if I recall correctly), which may have contributed to Hebrew, the word for milk/honey is a homograph (like English's their/there/they're). Thus, translators would have had a hard time determining which was which; in the end, they might translate it as both! Interestingly, ancient speakers might have even thought of the two as being very similar: they are both produced by a natural process, are sweet, and are indicators of life.</p>
+			</article>
+
+			<article class="life">
+				<h2>General Musings</h2>
+				<p></p>
 			</article>
 
 			<article class="life" date="1-29-2014" id="coal-tar-update">
@@ -203,6 +154,73 @@
         <!--<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>-->
       </footer>
     </div>
+
+	<script>
+		function getURLParameter(name) {
+			return decodeURI(
+				(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+			);
+		}
+
+		var margin = 0;
+
+		$(function() {
+			margin = $('.inner').first().css('margin-left');
+
+			//load sidr
+			$('#simple-menu').sidr();
+			$('#simple-menu').on('click', function() {
+				if($('.inner').first().css('margin-left') == margin)
+					$('.inner').css('margin-left', 0);
+				else
+					$('.inner').css('margin-left', margin);
+			});
+			$('#simple-menu').click();
+
+			$('#sidr ul li')
+				.addClass('all')
+				.removeClass('active');
+
+			//select musings
+			var param = getURLParameter('topic');
+			var topics = [
+				'ling',
+				'comp',
+				'rel',
+				'misc',
+				'life',
+				'all'
+			];
+
+			if($.inArray(param, topics) >= 0)
+			{
+				$('section article').hide();
+				if($('section article.' + param).length >= 1)
+				{
+					$('section article.' + param).show();
+					$('#sidr ul li.' + param).addClass('active');
+				}
+			}
+			else
+			{
+				if(param !== 'null' && param.length > 0)
+				{
+					//no-op since there are too-few articles on the topic
+					alert('Sorry, I don\'t have any musings on that topic--yet...so I\'ll just show all my posts.');
+					$('section article').show();
+				}
+				$('#sidr ul li').first().addClass('active');
+			}
+
+			$(topics).each(function(index, element)
+			{
+				$('section article.' + element).first()
+					.addClass('disclaimer')
+					.css('border-top', 'medium solid gray')
+					.css('margin-top', '80px');
+			});
+		});
+		</script>
 
   </body>
 </html>
