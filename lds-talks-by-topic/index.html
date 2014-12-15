@@ -11,33 +11,34 @@
       var li = $('<li>');
       li.addClass('topic');
       li.prop('topic_id', i);
-      li.html('<strong>words</strong>: <i>' + data.keyWords.join(', ') + '</i><br /><span style="color: green;">[<strong>probability</strong>: ' + data.value + ']</span>');
+      li.html('<strong>words</strong>: <i class="clickable">' + data.keyWords.join(', ') + '</i><br /><span style="color: green;">[<strong>probability</strong>: ' + data.value + ']</span>');
 
       // if(i < 20)
       $topics.append(li);
     });
     $('.topic').on('click', function() {
+      $('body').animate({ scrollTop: 0 }, 'slow');
       var $el = $(this);
       var docs = talkData[$el.prop('topic_id')].documents.concat().splice(0, 100);
       // console.log(docs);
       var $docs = $('#docs');
       $docs.html('').parent().show();
       $.each(docs, function(i, doc) {
-        $docs.append('<li class="doc" talkID="' + doc.talkID + '">' + doc.title + '<br /><span style="color:green;">[<strong>weight</strong>: ' + doc.distance + ']</span>' + '</li>');
+        $docs.append('<li class="doc" talkID="' + doc.talkID + '"><span class="clickable">' + doc.title + '</span><br /><span style="color:green;">[<strong>weight</strong>: ' + doc.distance + ']</span>' + '</li>');
       });
 
       $('.doc').on('click', function() {
         var location = 'http://scriptures.byu.edu/gettalk.php?ID=' + $(this).attr('talkID');
         $('#selectedDoc').attr('src', location).parent().show();
         $('#link').text(location);
+        $('body').animate({ scrollTop: 0 }, 'slow');
       });
     });
   });
   </script>
   <style>
-    h2 {
-      color: goldenrod;
-    }
+    h2 {color: goldenrod;}
+    .clickable {cursor: pointer;}
   </style>
   <body>
     <h1>Talk Topic Index</h1>
