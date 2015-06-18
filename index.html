@@ -15,6 +15,9 @@
       a {
         cursor: pointer;
       }
+      .claimToFame {
+        font-weight: 500;
+      }
     </style>
   </head>
 
@@ -127,7 +130,36 @@
             <!-- <li><span class="me"></span></li> -->
       		</ul>
         </div>
+        <hr>
+        <h4>Most current "statistics" <span style="font-size: smaller">(don't cry statisticians, you can use these to produce statistics):</span></h4>
 
+        <h5>At my current job:</h5>
+        <script>
+          $(function() {
+            var numbers = [
+              {title: 'Total # of tickets contributed to', count: '1000+'},
+              {title: 'Production-level tickets contributed to', count: 329},
+              {title: 'Near Production-level tickets contributed to', count: 98},
+              {title: 'Tickets created', count: '350 (176 bugs)'},
+              {title: 'Tickets Reviewed', count: 584},
+              {title: 'Tickets tested for quality assurance', count: 576},
+              // {title: 'Lines of code written', count: 'a lot...'},
+              {title: 'Test harnesses modernized, made more robust, etc.', count: 2},
+              {title: 'Core code bases contributed to', count: 2},
+              {title: 'Third-party tickets created', count: '7+ (adobe, JIRA, <a href="https://github.com/chocolatey/choco">choco</a>, <a href="https://github.com/mshang/syntree">syntree</a>)'},
+              {title: 'Custom Google Chrome Extensions Created', count: 4},
+              {title: 'Time saved at work because of a project I spearheaded', count: 'countless'},
+              {title: 'Number of domains/websites enhanced by my chrome extensions', count: '7+ (not counting local/test sites)'},
+            ];
+            numbers.reverse();
+
+            for(var i = 0; i < numbers.length; i++)
+              $('#currentNumbers').after('<li><span class="claimToFame">'+numbers[i].title+'</span>: ' + numbers[i].count + '</li>');
+          });
+        </script>
+        <ul id="currentNumbers">
+          <!-- This is automatically-filled -->
+        </ul>
       </section>
     </div>
 
