@@ -4,6 +4,3 @@
 [submodule "byu-webcams.git"]
 	path = byu-webcams.git
 	url = https://github.com/bean5/byu-webcams.git
-[submodule "tree-extension.git"]
-	path = tree-extension.git
-	url = https://github.com/bean5/tree-extension.git
