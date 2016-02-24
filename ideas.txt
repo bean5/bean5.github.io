@@ -1,7 +1,0 @@
-Machine Learning
-	Classification
-	Clustering
-		cluster stars (Greek vs. Roman--how many constellations are best? Which stars deserve to be in each constellation?)
-
-Mini-movies for work lunches--do it professionally for people who want a break from work.
-	
