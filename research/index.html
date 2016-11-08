@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset='utf-8' />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="description" content="Bean5.github.io : Research" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<script src="javascript/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="javascript/ga.js"></script>
+
+	<title>Michael Bean</title>
+	<style>
+		a {
+			cursor: pointer;
+		}
+
+		.claimToFame {
+			font-weight: 500;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<!-- <a id="forkme_banner" href="https://github.com/bean5">See my GitHub</a> -->
+
+			<h1 id="project_title"></h1>
+			<h2 id="project_tagline"></h2>
+
+			<!-- <section id="downloads">
+				<a class="zip_download_link" href="#">Download this project as a .zip file</a>
+				<a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
+			</section> -->
+
+		</header>
+	</div>
+
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
+			<p style="font-size:larger">
+				<!-- Following are some of my works. -->
+
+			<div id="research">
+				<h4>Research</h4>
+				<ul>
+					<li><a href="/research/CLDSGCT-LDA-ToT.pdf" class="BYU ToT LDA ling research publish computational">Theological topics through time: An application of Gibbs-sampled LDA and post-hoc metrics to compare religious venues in talks at conferences</a></li>
+				</ul>
+			</div>
+
+			<div id="like" style="display: none">
+				<h4>So, naturally, I like</h4>
+				<ul>
+					<!-- <li><a href="" class=""></a></li> -->
+					<!-- <li><span class="me"></span></li> -->
+				</ul>
+			</div>
+		</section>
+	</div>
+
+	<script>
+		$(function() {
+			hideAll();
+
+			$('#downloads').hide();
+
+			$('#BYU').on('click', function() {
+				toggleView('.BYU')
+			});
+			$('#LDA').on('click', function() {
+				toggleView('.contrib')
+			});
+			$('#ToT').on('click', function() {
+				toggleView('.fun')
+			});
+			$('#ling').on('click', function() {
+				toggleView('.ling')
+			});
+			$('#me').on('click', function() {
+				toggleView('.me')
+			});
+			$('#computational').on('click', function() {
+				toggleView('.mormon')
+			});
+			$('#NLP').on('click', function() {
+				toggleView('.NLP')
+			});
+			$('#solve').on('click', function() {
+				toggleView('.solve')
+			});
+			$('#engineer').on('click', function() {
+				toggleView('.engineer')
+			});
+			$('#all').on('click', function() {
+				showAll()
+			});
+		});
+
+		function hideAll() {
+			$('#research,#like').hide();
+			$('#research ul li, #like ul li').hide();
+		}
+
+		function showAll() {
+			$('#research,#like').show();
+			$('#research ul li, #like ul li').show();
+		}
+
+		function toggleView(tag) {
+			hideAll();
+			$('#research,#like').show();
+			$(tag).parent().show();
+		}
+	</script>
+
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+		</footer>
+	</div>
+
+</body>
+
+</html>
