@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: bean5.github.io
+Token: dea956d8b1834da316da3f55caec2a303b68c149ab11f53eaf2146242ba12372
