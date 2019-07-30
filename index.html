@@ -47,13 +47,14 @@
 				I work as a <a id="engineer">software engineer</a> or as a software engineer in test, but that's not all of me. I actively <a id="contrib">contribute code</a> to the open source community, <a id="research">conduct research</a>, and
 				<a id="solve">solve problems</a>. Sometimes I <a id="publish">publish</a>. In the process, I gather helpful <a id="NLP">NLP tools</a>. I do lots of smaller projects <a id="fun">just for fun</a>.
 				<!-- I am a <a id="mormon">Mormon</a>. -->
-				I am an avid believer in cryptocurrencies and trade stocks regularly. Occasionally, I have time to <a id="muse">muse/blog</a>. That just about <a id="all">covers it</a>.</p>
+				I am an avid believer in <a id="crypto">cryptocurrencies</a> and trade stocks regularly. Occasionally, I have time to <a id="muse">muse/blog</a>. That just about <a id="all">covers it</a>.</p>
 
 			<div id="about">
 				<h4>Me and Mine</h4>
 				<ul>
 					<!---<li><a href="https://github.com/bean5/bitbucketTricks" class="engineer solve contrib fun">BitBucketTricks</a> (enhances the <a href="https://bitbucket.org/">BitBucket</a> Experience with code custom code sniffing and much more)</li>--->
 					<!-- <li><a href="" class="publish research solve">Aligning Religious Texts (coming soon)</a></li> -->
+					<li><a href="https://bitcoin.org/en/" class="crypto">Bitcoin</a></li>
 					<li><a href="byu-testing-center-line.git/" class="BYU engineer contrib">BYU Testing Center Project</a> (also available in the google chrome store for free)
 						<br />
 					</li>
@@ -70,6 +71,7 @@
 					<!-- <li><a href="https://sites.google.com/site/beanmichael2/">My Online Portfolio</a></li> -->
 					<li><a href="nlp-haiku/index.html" class="research fun mormon">Haiku--Including some from General Conference</a></li>
 					<li><a href="http://bean5.github.io/Java-Porter-Stemmer/" class="contrib">Java 7 Porter Stemmer</a></li>
+					<li><a href="https://keybase.io" class="crypto">Keybase</a>. I am <a href="https://keybase.io/bean5">https://keybase.io/bean5</a></li>
 					<li><a href="http://bean5.github.io/learn_words/" class="research fun">Learn interesting words</a></li>
 					<li><a href="lds-talks-by-topic/" class="research ling mormon">LDS Talks by Topic</a></li>
 					<li><a href="http://www.linkedin.com/in/beanmichael" class="me">http://www.linkedin.com/in/beanmichael</a></li>
@@ -230,6 +232,9 @@
 			});
 			$('#contrib').on('click', function() {
 				toggleView('.contrib')
+			});
+			$('#crypto').on('click', function() {
+				toggleView('.crypto')
 			});
 			$('#fun').on('click', function() {
 				toggleView('.fun')
