@@ -200,7 +200,7 @@
 							count: '70-100 (waning over time--code is deprecated and SPAs are more of a thing now)'
 						}, {
 							title: 'Time saved at work because of projects I spearheaded',
-							count: 'countless'
+							count: 'a lot'
 						}, {
 							title: 'Number of <i>production</i> domains/websites enhanced by developer tools I created via chrome extensions',
 							count: '8+'
@@ -209,7 +209,7 @@
 					numbers.reverse();
 
 					for (var i = 0; i < numbers.length; i++)
-						$('#currentNumbers').after('<li><span class="claimToFame">' + numbers[i].title + '</span>: ' + numbers[i].count + '</li>');
+						$('#currentNumbers').after('<li><span class="claimToFame">' + numbers[i].title + '</span>: <em>' + numbers[i].count + '</em></li>');
 				});
 			</script>
 			<ul id="currentNumbers">
