@@ -209,7 +209,7 @@
 					numbers.reverse();
 
 					for (var i = 0; i < numbers.length; i++)
-						$('#currentNumbers').after('<li><span class="claimToFame">' + numbers[i].title + '</span>: <em>' + numbers[i].count + '</em></li>');
+						$('#currentNumbers').after(`<li><span class="claimToFame">${numbers[i].title}</span>: <em>${numbers[i].count}</em></li>`);
 				});
 			</script>
 			<ul id="currentNumbers">
