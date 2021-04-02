@@ -1,0 +1,16 @@
+https://bean5.github.io/
+https://bean5.github.io/AlliterationLocator/
+https://bean5.github.io/byu-testing-center-line.git/
+https://bean5.github.io/byu-webcams.git/
+https://bean5.github.io/computationalLinguistics/
+https://bean5.github.io/current/
+https://bean5.github.io/Java-Porter-Stemmer/
+https://bean5.github.io/LDS-GCC-talk-topics/
+https://bean5.github.io/lds-talks-by-topic/
+https://bean5.github.io/ling-utils/
+https://bean5.github.io/machine-learning/
+https://bean5.github.io/paraphraseDetector/
+https://bean5.github.io/research/
+https://bean5.github.io/SCI-Talk.git/
+https://bean5.github.io/sub-template/
+https://bean5.github.io/transformation/
