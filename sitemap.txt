@@ -1,0 +1,16 @@
+https://bean5.github.io/
+https://bean5.github.io/current/
+https://bean5.github.io/extension-byu-testing-center-line/
+https://bean5.github.io/extension-byu-webcams/
+https://bean5.github.io/extension-random-sci-talk/
+https://bean5.github.io/LDS-GCC-talk-topics/
+https://bean5.github.io/ling-utils/
+https://bean5.github.io/nlp-alliteration-locator/
+https://bean5.github.io/nlp-haiku/
+https://bean5.github.io/nlp-paraphrase-detector/
+https://bean5.github.io/nlp-porter-stemmer-java/
+https://bean5.github.io/nlp-topic-explorer/
+https://bean5.github.io/ml-food-classifier/
+https://bean5.github.io/research/
+https://bean5.github.io/sub-template/
+https://bean5.github.io/transformation/
