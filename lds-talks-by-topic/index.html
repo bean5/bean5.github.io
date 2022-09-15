@@ -44,9 +44,13 @@
       $('.doc').on('click', function() {
         $('body').animate({scrollTop: 0}, 'fast');
         var location = baseURL + $(this).attr('talkID');
-        $('#selectedDoc').attr('src', location).parent().show();
         $('#link').text(location);
         $('#link').attr('href', location);
+
+        $.get(location, function(data) {
+          // Need to replace image paths because they are not absolute at this resource
+          $('#selectedDoc').html(data.replace('images/', 'https://scriptures.byu.edu/images/')).parent().show();
+        });
       });
     });
   });
@@ -68,7 +72,7 @@
     <div style="width:18%; float: left; padding-left: 50px; display: none;">
       <h2>Selected <span class="documentOrTalk">Documents</span></h2>
       <p>Link: <a id="link"></a></p>
-      <iframe id="selectedDoc" src="https://scriptures.byu.edu/content/talks_ajax/1760" width="600" height="700"></iframe>
+      <div id="selectedDoc" width="600" height="700"></div>
     </div>
   </body>
 </html>
