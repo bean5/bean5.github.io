@@ -7,7 +7,7 @@
     var baseURL = 'files/';
 
     if(documentType == 'Talk') {
-      baseURL = 'http://scriptures.byu.edu/gettalk.php?ID=';
+      baseURL = 'https://scriptures.byu.edu/content/talks_ajax/';
       $('.documentOrTalk').text('Talk');
       $('title').text('Talk Topic Index');
     }
@@ -46,6 +46,7 @@
         var location = baseURL + $(this).attr('talkID');
         $('#selectedDoc').attr('src', location).parent().show();
         $('#link').text(location);
+        $('#link').attr('href', location);
       });
     });
   });
