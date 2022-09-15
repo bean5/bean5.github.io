@@ -50,6 +50,8 @@
         $.get(location, function(data) {
           // Need to replace image paths because they are not absolute at this resource
           $('#selectedDoc').html(data.replace('images/', 'https://scriptures.byu.edu/images/')).parent().show();
+          // Remove boilerplate
+          $('#selectedDoc #centernavbar').remove();
         });
       });
     });
